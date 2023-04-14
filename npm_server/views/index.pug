@@ -1,0 +1,6 @@
+extends layout.pug
+
+block content
+    each coin in coins
+        div
+            a(href="/coin/"+Buffer.from(coin.id).toString('base64'))=coin.id

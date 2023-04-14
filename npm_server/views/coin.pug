@@ -1,0 +1,38 @@
+extends layout.pug
+
+block content
+  table.ui.celled.table.center.aligned
+    thead
+      tr
+        th image
+        th name
+        th id
+        th eth_er
+        th usd_er
+        th pln_er
+        th last updated
+    tbody
+      tr
+        td
+          img.ui.mini.rounded.image(src=coin_info.image)
+        td #{coin_info.name}
+        td #{coin_info.id}
+        td #{coin_info.eth_er}
+        td #{coin_info.usd_er}
+        td #{coin_info.pln_er}
+        td #{coin_info.last_updated}
+    tfoot
+      tr
+        th(colspan='6')
+//- table
+//-   thead
+//-     tr
+//-       th Name:
+//-       th Link:
+//-   tbody
+//-     each pos in names
+//-       tr
+//-         td= pos.name
+//-         td a(href="/coin/" + Buffer.from(pos.id).toString("Base64"))=pos.name
+      
+//-         //- a(class = 'button', href="/coin/" + Buffer.from(coin.id).toString("Base64"))
