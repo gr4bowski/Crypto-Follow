@@ -32,20 +32,6 @@ app.get("/", async (req, res) => {
     }
 })
 
-// app.get("/coin/:coinId", async (req, res) => {
-//     const coinId64 = req.params.coinId;
-//     const coinId = Buffer.from(coinId64, "base64").toString("ascii");
-//     try {
-//         const result = await fetch(
-//             `https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&market_data=true&community_data=false&developer_data=false&sparkline=true`
-//         );
-//         const resultJSON = await result.json();
-//         res.send(resultJSON);
-//     } catch {
-//         res.send("Cannot fetch data right now, please wait a minute!")
-//     }
-// })
-
 app.get("/coin/:coinId", async (req, res) => {
     const coinId64 = req.params.coinId;
     const coinId = Buffer.from(coinId64, "base64").toString("ascii");
