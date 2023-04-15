@@ -3,12 +3,8 @@ html
       title= Coins
       link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css')
     body
-        //- ul
-        //-   each coin in coins
-        //-     li
-        //-       a(href="/coin/"+Buffer.from(coin.id).toString('base64'))=coin.id
-        main#main
-            h1.ui.center.aligned.header Coins
-            .ui.container
+      main#main
+          h1.ui.center.aligned.header Selected coin's data:
+          .ui.container
 
-            block content
+          block content

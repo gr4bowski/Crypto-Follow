@@ -6,10 +6,10 @@ block content
       tr
         th image
         th name
-        th id
-        th eth_er
-        th usd_er
-        th pln_er
+        th ID
+        th eth exchange rate
+        th usd exchange rate
+        th pln exchange rate
         th last updated
     tbody
       tr
@@ -23,16 +23,4 @@ block content
         td #{coin_info.last_updated}
     tfoot
       tr
-        th(colspan='6')
-//- table
-//-   thead
-//-     tr
-//-       th Name:
-//-       th Link:
-//-   tbody
-//-     each pos in names
-//-       tr
-//-         td= pos.name
-//-         td a(href="/coin/" + Buffer.from(pos.id).toString("Base64"))=pos.name
-      
-//-         //- a(class = 'button', href="/coin/" + Buffer.from(coin.id).toString("Base64"))
+        th(colspan='7')
